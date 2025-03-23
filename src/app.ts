@@ -10,12 +10,12 @@ const app = express();
 
 app.use(morgan('dev'));
 app.use(cors());
+app.use(express.json());
 
 app.get('/', (req: Request, res: Response) => {
     console.log('Hola mundo');
-    res.send('Hola mundo');
+    res.send('Academia');
 });
-
 
 app.use('/estudiantes', estudiantesRoutes);
 app.use('/profesores', profesoresRoutes);
