@@ -4,6 +4,7 @@ import { AppDataSource } from './db/connection';
 
 async function main() {
     try {
+        console.log('hola')
         await AppDataSource.initialize();
         console.log("Base de datos conectada")
         app.listen(port, () => {
